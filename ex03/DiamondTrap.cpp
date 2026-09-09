@@ -6,7 +6,7 @@
 /*   By: marudlof <marudlof@42.angouleme.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 17:06:35 by marudlof          #+#    #+#             */
-/*   Updated: 2026/09/08 15:48:44 by marudlof         ###   ########.fr       */
+/*   Updated: 2026/09/09 15:39:27 by marudlof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ DiamondTrap::DiamondTrap(void) :
 	this->_energyPoints = 50;
 	this->_attackDamage = 30;
 	std::cout << "DiamondTrap: " << this->_name
-		<< " :Default constructor called" << std::endl;
+		<< ": Default constructor called" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const std::string& name) :
@@ -36,7 +36,7 @@ DiamondTrap::DiamondTrap(const std::string& name) :
 	this->_energyPoints = 50;
 	this->_attackDamage = 30;
 	std::cout << "DiamondTrap: " << this->_name
-		<< " :String assignment constructor called" << std::endl;
+		<< ": String assignment constructor called" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& other) :
@@ -46,13 +46,13 @@ DiamondTrap::DiamondTrap(const DiamondTrap& other) :
 	_name(other._name)
 {
 	std::cout << "DiamondTrap: " << this->_name
-		<< " :Copy constructor called" << std::endl;
+		<< ": Copy constructor called" << std::endl;
 }
 
 DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& other)
 {
 	std::cout << "DiamondTrap: " << this->_name
-		<< " :Copy assignment operator called" << std::endl;
+		<< ": Copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
 		this->ClapTrap::operator=(other);
@@ -64,7 +64,7 @@ DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& other)
 DiamondTrap::~DiamondTrap(void)
 {
 	std::cout << "DiamondTrap: " << this->_name
-		<< " :Destructor called" << std::endl;
+		<< ": Destructor called" << std::endl;
 }
 
 void	DiamondTrap::attack(const std::string& target)
