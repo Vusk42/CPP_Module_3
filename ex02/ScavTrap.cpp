@@ -67,7 +67,7 @@ void	ScavTrap::attack(const std::string& target)
 		return ;
 	}
 	this->_energyPoints--;
-	std::cout << "ScavTrap " << this->_name << " savagely bites " << target
+	std::cout << "ScavTrap " << this->_name << " attacks " << target
 		<< ", causing " << this->_attackDamage << " points of damage!"
 		<< std::endl;
 }

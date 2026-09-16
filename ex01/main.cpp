@@ -6,7 +6,7 @@
 /*   By: marudlof <marudlof@42.angouleme.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 16:44:48 by marudlof          #+#    #+#             */
-/*   Updated: 2026/09/07 17:03:34 by marudlof         ###   ########.fr       */
+/*   Updated: 2026/09/16 17:12:06 by marudlof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,18 @@ int	main(void)
 	{
 		ScavTrap	serena("Serena");
 
+		std::cout << std::endl << "=== Inherited stats ===" << std::endl;
+		std::cout << serena.getName() << ": hp=" << serena.getHitPoints()
+			<< " ep=" << serena.getEnergyPoints()
+			<< " ad=" << serena.getAttackDamage() << std::endl;
+
 		std::cout << std::endl << "=== ScavTrap in action ===" << std::endl;
 		serena.attack("Bob");
 		serena.guardGate();
 		serena.takeDamage(40);
 		serena.beRepaired(15);
 
-		std::cout << std::endl << "=== Inherited stats ===" << std::endl;
+		std::cout << std::endl << "=== Inherited stats (after actions) ===" << std::endl;
 		std::cout << serena.getName() << ": hp=" << serena.getHitPoints()
 			<< " ep=" << serena.getEnergyPoints()
 			<< " ad=" << serena.getAttackDamage() << std::endl;

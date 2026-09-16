@@ -6,7 +6,7 @@
 /*   By: marudlof <marudlof@42.angouleme.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 17:05:36 by marudlof          #+#    #+#             */
-/*   Updated: 2026/09/07 17:05:37 by marudlof         ###   ########.fr       */
+/*   Updated: 2026/09/16 17:13:49 by marudlof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,10 @@ int	main(void)
 		<< std::endl;
 	{
 		FragTrap	frag("Frag");
+
+		std::cout << frag.getName() << ": hp=" << frag.getHitPoints()
+			<< " ep=" << frag.getEnergyPoints()
+			<< " ad=" << frag.getAttackDamage() << std::endl;
 
 		std::cout << std::endl << "=== FragTrap in action ===" << std::endl;
 		frag.attack("Bob");
